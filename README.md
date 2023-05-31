@@ -106,7 +106,7 @@ Angular proporciona el módulo **HttpClient** para realizar llamadas HTTP (`@ang
 Para configurar el nuevo módulo añadimos en [src/app/app.module.ts]:
 >import { HttpClientModule } from "@angular/common/http";
 
-##Crea un servicio para encapsular las llamadas a la API
+## Crea un servicio para encapsular las llamadas a la API ⭐
 
 Lo ideal es usar un servicio para centralizar las llamadas al servidor, de esta forma el resto de la aplicación se abstrae del origen de datos y basta con modificar o ampliar el servicio para adaptar la aplicación si se producen por ejemplo cambios en el protocolo de llamadas.
 >ng g service clientes/servicios/api
