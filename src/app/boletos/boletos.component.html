@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compra de Boletos 🎞️</title>
+  <style>
+    /* Estilos CSS para personalizar la apariencia de la página */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 10px;
+    }
+
+    h1 {
+      text-align: right;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select {
+      width: 50%;
+      padding: 5px;
+      margin-top: 5px;
+      border: 1px solid #000000;
+      border-radius: 5px;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #4eaf4c;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Compra de Boletos 🎫</h1>
+
+  <form>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="pelicula">Película:</label>
+    <select id="pelicula" name="pelicula" required>
+      <option value="">Selecciona una película</option>
+      <option value="pelicula1">Little Mermaid 2023</option>
+      <option value="pelicula2">Super Mario Bros La Pelicula</option>
+      <option value="pelicula3">Guardianes de la galaxia Vol.3</option>
+      <option value="pelicula4">Barbie la pelicula</option>
+      <option value="pelicula5">Rapidos y Furiosos X</option>
+      <option value="pelicula6">Spiderman into spiderverse 2</option>
+      <!-- Agrega más opciones de películas según tus necesidades -->
+    </select>
+
+    <label for="cantidad">Cantidad de boletos:</label>
+    <input type="number" id="cantidad" name="cantidad" min="1" required>
+    <label for="total">Total:</label>
+    <input id="total" readonly>
+
+    <script>
+      document.getElementById('cantidad').addEventListener('input', function() {
+        var cantidad = parseFloat(this.value);
+        var total = isNaN(cantidad) ? 0 : cantidad * 69.9;
+        document.getElementById('total').value = total.toFixed(2);
+      });
+    </script>
+
+
+    <label for="metodoPago">Método de Pago:</label>
+    <select id="metodoPago" name="metodoPago" required>
+      <option value="">Selecciona un método de pago</option>
+      <option value="Tarjeta">Tarjeta de crédito</option>
+      <option value="Efectivo">Efectivo</option>
+      <option value="Socio Cine Latino">Socio Cine Latino 20%</option>
+      <option value="Mercado Pago ">Mercado Pago</option>
+
+      <!-- Agrega más opciones de métodos de pago según tus necesidades -->
+    </select>
+
+    <input type="submit" value="Comprar">
+
+  </form>
+</body>
+</html>

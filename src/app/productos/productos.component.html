@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Comida y Promociones</title>
+  <style>
+    .slider-container {
+      width: 100%;
+      height: 300px; /* Ajusta la altura según tus necesidades */
+      overflow: hidden;
+    }
+
+    .slider {
+      display: flex;
+      animation: slide 20s infinite; /* Controla la velocidad del deslizamiento */
+    }
+
+    .slider img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+      25% {
+        transform: translateX(-100%);
+      }
+      50% {
+        transform: translateX(-200%);
+      }
+      /* Añade más porcentajes según el número de imágenes */
+    }
+
+    .slider.ordenado {
+      animation: none;
+    }
+
+    .slider.ordenado img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+      color: red ;
+    }
+  </style><
+</head>
+<body>
+  <div class="slider-container">
+    <div class="slider">
+      <img src="assets/promo1.jpg" alt="Imagen 1">
+      <img src="assets/promo2.jpg" alt="Imagen 2">
+      <img src="assets/promo3.jpg" alt="Imagen 3">
+      <img src="assets/promo4.jpg" alt="Imagen 3">
+      <img src="assets/promo5.jpg" alt="Imagen 3">
+      <!-- Agrega más imágenes según sea necesario -->
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</body>
+</html>
+
