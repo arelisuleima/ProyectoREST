@@ -160,7 +160,7 @@ Declaramos un nuevo método `getFrase()` que retorna un objeto de tipo `Frase` y
 
 Creo un nuevo componente para crear la vista que muestra la frase:
 
-> ng g c chuck/componentes/verfrase
+> ng g c clientes/componentes/verfrase
 Una instancia Observable sólo comienza a publicar valores cuando alguien se suscribe a el usando el método `subscribe()` de la instancia.
 
 Edito el método `ngOnInit` en [src/app/componentes/verfrase/verfrase.component.ts], este método se suscribe al observable y recibe el objeto.
